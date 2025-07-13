@@ -12,9 +12,20 @@
     <link rel="icon" href="/IraniFarsh/assets/favicon-DkL49Je-.ico" />
     <title>ایرانی فرش</title>
     <script type="module" crossorigin src="/IraniFarsh/assets/index-B_goutT1.js"></script>
-    <link rel="stylesheet" crossorigin href="/IraniFarsh/assets/index-CPQ2kE5u.css">
+    <link rel="stylesheet" crossorigin href="/IraniFarsh/assets/index-CPQ2kE5u.css" />
   </head>
   <body>
     <div id="root"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.location.hash) {
+          const hash = window.location.hash.substring(1);
+          if (hash.includes("type=recovery")) {
+            window.location.href = `/auth/recovery?${hash}`;
+          }
+        }
+      });
+    </script>
   </body>
 </html>
