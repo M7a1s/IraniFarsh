@@ -16,5 +16,16 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.location.hash) {
+          const hash = window.location.hash.substring(1);
+          if (hash.includes("type=recovery")) {
+            window.location.href = `/auth/recovery?${hash}`;
+          }
+        }
+      });
+    </script>
   </body>
 </html>
