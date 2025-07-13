@@ -1,69 +1,63 @@
-# React + TypeScript + Vite
+<div align="center">
+  <a href="https://m7a1s.github.io/IraniFarsh/" style="color: #cb1b1b; font-size: 30px; font-weight: 700">
+    ایرانی فرش
+  </a>
+</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h3 align="center">IraniFarsh</h3>
 
-Currently, two official plugins are available:
+<p align="center">
+  <a href="https://m7a1s.github.io/IraniFarsh/" style="margin: 0 10px;">View Demo</a>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📸 Preview
 
-## Expanding the ESLint configuration
+![screenshot](./src/assets/image/preview.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Features
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Advanced admin panel
+- High performance optimization and high loading speed
+- Advanced search capabilities with multiple filters
+- Developed using the latest and most advanced libraries
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+<table align="left">
+  <thead>
+    <tr>
+      <th style="text-align: left;">Description</th>
+      <th style="text-align: left;">Tech</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left;">Frontend library</td>
+      <td style="text-align: left;">React</td>
+    </tr>
+    <tr>
+      <td style="text-align: left;">Routing library for React</td>
+      <td style="text-align: left;">React Router</td>
+    </tr>
+    <tr>
+      <td style="text-align: left;">Utility-first CSS framework</td>
+      <td style="text-align: left;">Tailwind CSS</td>
+    </tr>
+    <tr>
+      <td style="text-align: left;">UI component library</td>
+      <td style="text-align: left;">Material UI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left;">JavaScript library for sliders</td>
+      <td style="text-align: left;">Swiper</td>
+    </tr>
+    <tr>
+      <td style="text-align: left;">Interactive maps library</td>
+      <td style="text-align: left;">Leaflet</td>
+    </tr>
+    <tr>
+      <td style="text-align: left;">Icon font scripts</td>
+      <td style="text-align: left;">Iconsax</td>
+    </tr>
+  </tbody>
+</table>

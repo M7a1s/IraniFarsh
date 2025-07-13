@@ -69,8 +69,8 @@ const Login = (): ReactElement => {
     },
     onSuccess: (data) => {
       const metadata = data.user.user_metadata;
-      setCookie("access_token", data.access_token, { path: "/", secure: false });
-      setCookie("refresh_token", data.refresh_token, { path: "/", secure: false });
+      setCookie("access_token", data.access_token, { path: "/", secure: true });
+      setCookie("refresh_token", data.refresh_token, { path: "/", secure: true });
 
       Auth?.setUserData({
         id: metadata.sub,

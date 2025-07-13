@@ -92,8 +92,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
           const newAccessToken = refreshData.access_token;
           const newRefreshToken = refreshData.refresh_token;
 
-          setCookie("access_token", newAccessToken, { path: "/", secure: false });
-          setCookie("refresh_token", newRefreshToken, { path: "/", secure: false });
+          setCookie("access_token", newAccessToken, { path: "/", secure: true });
+          setCookie("refresh_token", newRefreshToken, { path: "/", secure: true });
 
           await fetchUser(newAccessToken);
         } else {
