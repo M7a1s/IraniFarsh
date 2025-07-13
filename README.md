@@ -1,6 +1,6 @@
 <div align="center">
-  <a href="https://m7a1s.github.io/IraniFarsh/" style="color: #cb1b1b; font-size: 30px; font-weight: 700">
-    ایرانی فرش
+  <a href="https://m7a1s.github.io/AutoRent/">
+    <img src="./src/assets/image/Logo.png" width="200" alt="Auto Rent Logo" />
   </a>
 </div>
 
