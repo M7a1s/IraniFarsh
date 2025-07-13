@@ -44,6 +44,7 @@ const ResetPass = (): ReactElement => {
         },
         body: JSON.stringify({
           email: email,
+          redirect_to: "https://m7a1s.github.io/IraniFarsh/#",
         }),
       });
 

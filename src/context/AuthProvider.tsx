@@ -110,15 +110,21 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   };
 
   useEffect(() => {
-    const hash = window.location.hash.substring(1);
-    if (hash.includes("error=")) {
+    let hash = window.location.hash.substring(1);
+
+    const secondHashIndex = hash.indexOf("#");
+    if (secondHashIndex !== -1) {
+      hash = hash.slice(0, secondHashIndex) + "?" + hash.slice(secondHashIndex + 1);
+    }
+
+    if (hash.includes("error=") || hash.includes("type=email_change")) {
       navigate("/");
+      return;
     }
 
     if (hash.includes("type=recovery")) {
       const indexOfQuestion = hash.indexOf("?");
-      const query = indexOfQuestion !== -1 ? hash.substring(indexOfQuestion + 1) : hash;
-
+      const query = indexOfQuestion !== -1 ? hash.substring(indexOfQuestion + 1) : "";
       navigate(`/auth/recovery?${query}`);
     }
 
