@@ -1,0 +1,2 @@
+enError: For security purposes, you can only request this after 57 seconds.
+faError: خطای ناشناخته رخ داده است

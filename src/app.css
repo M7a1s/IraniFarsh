@@ -1,0 +1,223 @@
+@import "tailwindcss";
+
+@theme {
+  --color-*: initial;
+  --font-*: initial;
+  --color-tint1: #fdf1f1;
+  --color-tint2: #fce8e8;
+  --color-tint3: #f9d2d2;
+  --color-tint4: #f6bbbb;
+  --color-tint5: #fca197;
+  --color-tint6: #f66262;
+  --color-tint7: #e43434;
+  --color-primary: #cb1b1b;
+  --color-shade1: #b41818;
+  --color-shade2: #9e1515;
+  --color-shade3: #871212;
+  --color-shade4: #700f0f;
+  --color-shade5: #5a0c0c;
+  --color-shade6: #430909;
+  --color-neutral1: #fafafa;
+  --color-neutral2: #f9f9f9;
+  --color-neutral3: #ededed;
+  --color-neutral4: #e1e1e1;
+  --color-neutral5: #d9d9d9;
+  --color-neutral6: #cbcbcb;
+  --color-neutral7: #adadad;
+  --color-neutral8: #909090;
+  --color-neutral9: #717171;
+  --color-neutral10: #505050;
+  --color-neutral11: #353535;
+  --color-neutral12: #212121;
+  --color-white: #fff;
+  --color-black: #121212;
+  --color-green: #0f7b3b;
+  --color-yellow: #ffb800;
+  --font-Estedad: Estedad, sans-serif;
+  --leading-140: 140%;
+  --leading-180: 140%;
+  --breakpoint-xs: 500px;
+}
+
+@layer base {
+  @font-face {
+    font-family: "Estedad";
+    src: url("./assets/fonts/Estedad-FD.woff2"), format("woff2");
+  }
+
+  * {
+    @apply select-none !font-Estedad outline-none text-black;
+  }
+
+  img {
+    @apply pointer-events-none;
+  }
+
+  body {
+    @apply overflow-x-hidden;
+  }
+
+  #productSwiper > .swiper-wrapper {
+    @apply justify-between;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+
+  *:not(textarea)::-webkit-scrollbar {
+    @apply w-3.5;
+  }
+
+  *:not(textarea)::-webkit-scrollbar-track {
+    @apply bg-white;
+  }
+
+  *:not(textarea)::-webkit-scrollbar-thumb {
+    @apply bg-primary border-4 border-white rounded-full;
+  }
+
+  @supports not selector(::-webkit-scrollbar) {
+    *:not(textarea) {
+      scrollbar-color: var(--color-primary) var(--color-white);
+    }
+  }
+
+  .leaflet-touch .leaflet-control-attribution,
+  .leaflet-touch .leaflet-control-layers,
+  .leaflet-touch .leaflet-bar {
+    @apply !hidden;
+  }
+
+  .leaflet-popup {
+    @apply !-bottom-7;
+  }
+
+  .leaflet-popup-content-wrapper {
+    @apply !bg-transparent !border-0 !shadow-none !p-0 !-bottom-80;
+  }
+
+  .leaflet-popup-tip {
+    @apply !hidden;
+  }
+}
+
+@layer components {
+  .text-display2 {
+    @apply font-bold text-[64px] leading-140;
+  }
+
+  .text-display1 {
+    @apply font-bold text-[56px] leading-[150%];
+  }
+
+  .h1 {
+    @apply font-bold text-[44px] leading-140;
+  }
+
+  .h2 {
+    @apply font-bold text-[40px] leading-140;
+  }
+
+  .h3 {
+    @apply font-bold text-[32px] leading-140;
+  }
+
+  .h4 {
+    @apply font-bold text-2xl leading-140;
+  }
+
+  .h5 {
+    @apply font-bold text-xl leading-140;
+  }
+
+  .h6 {
+    @apply font-bold text-base leading-140;
+  }
+
+  .Body-3XL {
+    @apply font-medium text-[44px] leading-140;
+  }
+
+  .Body-2XIG {
+    @apply font-medium text-[40px] leading-140;
+  }
+
+  .Body-XLG {
+    @apply font-medium text-[32px] leading-140;
+  }
+
+  .Body-LG {
+    @apply font-normal text-[28px] leading-180;
+  }
+
+  .Body-MD {
+    @apply font-medium text-2xl leading-180;
+  }
+
+  .Body-SMD {
+    @apply font-normal text-2xl leading-180;
+  }
+
+  .Body-Regular {
+    @apply font-normal text-xl leading-180;
+  }
+
+  .Body-S {
+    @apply font-normal text-lg leading-180;
+  }
+
+  .Body-XS {
+    @apply font-normal text-base leading-180;
+  }
+
+  .Body-XXS {
+    @apply font-normal text-sm leading-180;
+  }
+
+  .Caption-LG {
+    @apply font-bold text-sm leading-180;
+  }
+
+  .Caption-MD {
+    @apply font-normal text-xs leading-180;
+  }
+
+  .Button-XLG {
+    @apply font-medium text-lg leading-180;
+  }
+
+  .Button-LG {
+    @apply font-medium text-base leading-180;
+  }
+
+  .Button-MD {
+    @apply font-medium text-sm leading-180;
+  }
+
+  .Button-S {
+    @apply font-medium text-xs leading-180;
+  }
+
+  .FOR-MOBILE-CARD {
+    @apply font-bold text-[11px] leading-180;
+  }
+
+  .FOR-MOBILE {
+    @apply font-medium text-[10px] leading-180;
+  }
+}
+
+@layer utilities {
+  .BodyPadding {
+    @apply px-4 xs:px-6 lg:px-12 xl:px-27 2xl:px-32;
+  }
+
+  .flexLayout {
+    @apply flex flex-col justify-between items-center gap-y-12 xs:gap-y-16 md:gap-y-20 lg:gap-y-24 xl:gap-y-30;
+  }
+
+  .ResponsiveFontSize {
+    @apply text-[clamp(16px,4vw+10px,32px)] font-semibold;
+  }
+}
