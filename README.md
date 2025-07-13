@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://m7a1s.github.io/AutoRent/">
+  <a href="https://m7a1s.github.io/IraniFarsh/">
     <img src="./src/assets/image/Logo.png" width="200" alt="Auto Rent Logo" />
   </a>
 </div>
