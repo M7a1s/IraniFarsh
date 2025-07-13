@@ -111,19 +111,13 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     const hash = window.location.hash.substring(1);
-    if (hash.includes("error=") || hash.includes('type=email_change')) {
+
+    if (hash.includes("error=") || hash.includes("type=email_change")) {
       navigate("/");
     }
 
-    if (hash.includes("type=recovery")) {
-      const indexOfQuestion = hash.indexOf("?");
-      const query = indexOfQuestion !== -1 ? hash.substring(indexOfQuestion + 1) : hash;
-
-      navigate(`/auth/recovery?${query}`);
-    }
-
     tryAutoLogin();
-  }, [navigate]);
+  }, []);
 
   return <AuthContext.Provider value={{ isLogin, setIsLogin, userData, setUserData, handleLogOut, isLoading }}>{children}</AuthContext.Provider>;
 };

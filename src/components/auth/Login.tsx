@@ -99,12 +99,6 @@ const Login = (): ReactElement => {
         <Controller key={name} name={name as keyof FormValues} control={control} render={({ field }) => <CustomInput {...field} label={label} type={type} Icon={Icon} error={errors[name as keyof FormValues]?.message} width="100%" height="56px" />} />
       ))}
 
-      <div className="w-full text-start">
-        <Link to="/auth/reset-pass" className="hover:text-primary">
-          فراموشی رمز عبور؟
-        </Link>
-      </div>
-
       <CustomButton type="submit" variant="filled" width="w-full" height="h-14" rounded="rounded-xl" element="button" ratio={"aspect-auto"} ariaLabel="ورود">
         {Auth?.isLoading || loginMutation.isPending ? <Spinner className="size-7 fill-white" /> : "ورود"}
       </CustomButton>

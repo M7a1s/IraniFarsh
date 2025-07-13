@@ -4,8 +4,7 @@ import Login from "@/components/auth/Login";
 import { useLocation, Link, Navigate } from "react-router-dom";
 import { Add } from "iconsax-react";
 import { AuthContext } from "@/context/AuthProvider";
-import ResetPass from "@/components/auth/ResetPass";
-import Recovery from "@/components/auth/Recovery";
+
 import { setDocumentTitle } from "@/utils/utils";
 
 const Elem = [
@@ -18,16 +17,6 @@ const Elem = [
     path: "/auth/signup",
     title: "ثبت نام",
     elem: <SignUp />,
-  },
-  {
-    path: "/auth/reset-pass",
-    title: "بازیابی رمز عبور",
-    elem: <ResetPass />,
-  },
-  {
-    path: "/auth/recovery",
-    title: "بازیابی رمز عبور",
-    elem: <Recovery />,
   },
 ];
 
