@@ -30,7 +30,7 @@ const SideBar: React.FC<SideBarPropsType> = ({ openSideBar, toggleSideBar }) => 
 
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation">
-      <List>
+      <List dir="rtl">
         {navHeader.map((e, index) => (
           <ListItem key={index} disablePadding>
             <ListItemButton
@@ -50,8 +50,9 @@ const SideBar: React.FC<SideBarPropsType> = ({ openSideBar, toggleSideBar }) => 
               <ListItemText
                 primary={e.label}
                 sx={{
-                  "& .css-rizt0-MuiTypography-root": {
+                  ".MuiTypography-root": {
                     textAlign: "start",
+                    width: "fit-content",
                   },
                 }}
               />

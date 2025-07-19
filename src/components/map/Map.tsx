@@ -36,7 +36,7 @@ const Map: React.FC = () => {
   return (
     <div className={`w-full ${matches && "w-[574px]"} h-[371px] overflow-hidden rounded-4xl bg-blue-200`}>
       <MapContainer zoomControl={false} center={[35.67401162293568, 51.358740510663516]} style={{ height: "100%", width: "100%" }} minZoom={11} zoom={16}>
-        <TileLayer url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png" />
+        <TileLayer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" />
         {locations.map((e, idx) => (
           <Marker key={idx} position={e} icon={customIcon}>
             <Popup closeButton={false}>

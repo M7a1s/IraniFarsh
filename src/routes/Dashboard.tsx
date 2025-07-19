@@ -159,7 +159,17 @@ const Dashboard = (): ReactElement => {
         </div>
       </div>
 
-      <Dialog open={DialogState.open} onClose={handleClose} aria-labelledby="alert-dialog-title" aria-describedby="alert-dialog-description" sx={{ ".css-10d30g3-MuiPaper-root-MuiDialog-paper": { borderRadius: "16px" } }}>
+      <Dialog
+        open={DialogState.open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+        sx={{
+          "& .MuiPaper-root": {
+            borderRadius: "16px",
+          },
+        }}
+      >
         <DialogTitle id="alert-dialog-title">{DialogState?.title}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">{DialogState?.content}</DialogContentText>

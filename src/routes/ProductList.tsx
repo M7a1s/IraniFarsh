@@ -1,4 +1,4 @@
-import { useState, useEffect, type ReactElement, useMemo } from "react";
+import { useState, type ReactElement, useMemo } from "react";
 import { ArrowDown2, Sort } from "iconsax-react";
 import Slider from "@mui/material/Slider";
 import CustomRadio from "@/components/common/CustomRadio";
@@ -123,24 +123,24 @@ const ProductList = (): ReactElement => {
           <Slider
             sx={{
               width: "95%",
-              ".css-1xcmt9q-MuiSlider-thumb": {
+              ".MuiSlider-thumb": {
                 backgroundColor: "var(--color-primary)",
               },
-              ".css-xvk2i-MuiSlider-track": {
+              ".MuiSlider-track": {
                 backgroundColor: "var(--color-primary)",
                 borderColor: "var(--color-primary)",
               },
-              ".css-1asissc-MuiSlider-valueLabel": {
+              ".MuiSlider-valueLabel": {
                 display: "none !important",
                 all: "unset",
               },
               ".MuiSlider-valueLabelLabel": {
                 color: "var(--color-black)",
               },
-              ".css-1xcmt9q-MuiSlider-thumb:hover": {
+              ".MuiSlider-thumb:hover": {
                 boxShadow: "0px 0px 0px 8px rgba(0, 0, 0, 0.16)",
               },
-              ".css-1xcmt9q-MuiSlider-thumb.Mui-active": {
+              ".MuiSlider-thumb.Mui-active": {
                 boxShadow: "0px 0px 0px 8px rgba(0, 0, 0, 0.16)",
               },
             }}
@@ -239,36 +239,28 @@ const ProductList = (): ReactElement => {
 
   const gridClassName = `grid ${matches ? "grid-cols-[repeat(auto-fit,minmax(288px,auto))] flex-1 justify-between" : matches3 ? "grid-cols-[auto_auto] justify-between" : "grid-cols-[auto] justify-center"} w-full items-center gap-10`;
 
-  useEffect(() => {
-    if (openFilterBar && openIndex !== null) {
-      setOpenIndex(null);
-    }
-  }, [openFilterBar, openIndex]);
+  const childDrawer = (
+    <>
+      {filterArray.map((e, index) => (
+        <div className={`flex flex-col items-center w-full py-2 ${openIndex === index && "border border-neutral5 rounded-2xl"}`} key={index}>
+          <button type="button" onClick={() => handleToogle(index)} className={`w-full flex justify-between items-center px-2 ${openIndex === index && "border-b border-b-neutral5 pb-2"}`}>
+            <p>{e.name}</p>
+            <div>
+              <ArrowDown2 className={`size-6 duration-150 stroke-black ${openIndex === index && "rotate-180"}`} />
+            </div>
+          </button>
 
-  const childDrawer = () => {
-    return (
-      <>
-        {filterArray.map((e, index) => (
-          <div className={`flex flex-col items-center w-full py-2 ${openIndex === index && "border border-neutral5 rounded-2xl"}`} key={index}>
-            <button type="button" onClick={() => handleToogle(index)} className={`w-full flex justify-between items-center px-2 ${openIndex === index && "border-b border-b-neutral5 pb-2"}`}>
-              <p>{e.name}</p>
-              <div>
-                <ArrowDown2 className={`size-6 duration-150 stroke-black ${openIndex === index && "rotate-180"}`} />
-              </div>
-            </button>
-
-            {openIndex === index && <div className="w-[95%] flex flex-col items-start gap-y-4 mt-3 px-2 pb-1">{e.children}</div>}
-          </div>
-        ))}
-
-        <div className="w-full h-14 mt-auto">
-          <CustomButton variant="filled" width="w-full" height="h-14" rounded="rounded-xl" element="button" ratio={"aspect-auto"} ariaLabel="حذف فیلتر" onClick={() => methods.reset(AllFilter)}>
-            حذف فیلتر
-          </CustomButton>
+          {openIndex === index && <div className="w-[95%] flex flex-col items-start gap-y-4 mt-3 px-2 pb-1">{e.children}</div>}
         </div>
-      </>
-    );
-  };
+      ))}
+
+      <div className="w-full h-14 mt-auto">
+        <CustomButton variant="filled" width="w-full" height="h-14" rounded="rounded-xl" element="button" ratio={"aspect-auto"} ariaLabel="حذف فیلتر" onClick={() => methods.reset(AllFilter)}>
+          حذف فیلتر
+        </CustomButton>
+      </div>
+    </>
+  );
 
   return (
     <FormProvider {...methods}>
@@ -278,12 +270,12 @@ const ProductList = (): ReactElement => {
         <div className={`w-full flex ${matches ? "flex-row" : "flex-col gap-y-6"} items-start gap-x-20`}>
           {matches ? (
             <form noValidate onSubmit={methods.handleSubmit(onSubmit)}>
-              <div className="flex h-[500px] rounded-2xl w-80 flex-col gap-y-2 overflow-y-auto border border-neutral5 bg-white shadow-2xl p-2">{childDrawer()}</div>
+              <div className="flex h-[500px] rounded-2xl w-80 flex-col gap-y-2 overflow-y-auto border border-neutral5 bg-white shadow-2xl p-2">{childDrawer}</div>
             </form>
           ) : (
             <Drawer
               sx={{
-                ".css-y7ab46-MuiPaper-root-MuiDrawer-paper": {
+                ".MuiDrawer-paper": {
                   display: "flex",
                   flexDirection: "column",
                   rowGap: "8px",
@@ -300,7 +292,7 @@ const ProductList = (): ReactElement => {
               open={openFilterBar}
               onClose={() => setPpenFilterBar(false)}
             >
-              {childDrawer()}
+              {childDrawer}
             </Drawer>
           )}
 
