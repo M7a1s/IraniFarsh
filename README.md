@@ -26,38 +26,39 @@
 <table align="left">
   <thead>
     <tr>
-      <th style="text-align: left;">Description</th>
       <th style="text-align: left;">Tech</th>
+      <th style="text-align: left;">Description</th>
     </tr>
+
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left;">Frontend library</td>
       <td style="text-align: left;">React</td>
+      <td style="text-align: left;">Frontend library</td>
     </tr>
     <tr>
-      <td style="text-align: left;">Routing library for React</td>
       <td style="text-align: left;">React Router</td>
+      <td style="text-align: left;">Routing library for React</td>
     </tr>
     <tr>
-      <td style="text-align: left;">Utility-first CSS framework</td>
       <td style="text-align: left;">Tailwind CSS</td>
+      <td style="text-align: left;">Utility-first CSS framework</td>
     </tr>
     <tr>
-      <td style="text-align: left;">UI component library</td>
       <td style="text-align: left;">Material UI</td>
+      <td style="text-align: left;">UI component library</td>
     </tr>
     <tr>
-      <td style="text-align: left;">JavaScript library for sliders</td>
       <td style="text-align: left;">Swiper</td>
+      <td style="text-align: left;">JavaScript library for sliders</td>
     </tr>
     <tr>
-      <td style="text-align: left;">Interactive maps library</td>
       <td style="text-align: left;">Leaflet</td>
+      <td style="text-align: left;">Interactive maps library</td>
     </tr>
     <tr>
-      <td style="text-align: left;">Icon font scripts</td>
       <td style="text-align: left;">Iconsax</td>
+      <td style="text-align: left;">Icon font scripts</td>
     </tr>
   </tbody>
 </table>
