@@ -22,15 +22,15 @@ const Footer = (): ReactElement | null => {
 
           <div className="w-full flex justify-between items-center">
             <div className="space-y-4">
-              <a href="tel:0212544" className="Body-S text-neutral10 block">
-                تلفن پشتیبانی: 0212544
+              <a href="tel:+XX XXXX XXXX" className="Body-XS text-neutral10 block">
+                تلفن پشتیبانی: +XX XXXX XXXX
               </a>
 
               <div className="flex items-center gap-x-6">
                 {Social.map((e, index) => (
-                  <a key={index} href={e.path} aria-label={e.Label} className="group">
+                  <Link key={index} to='/' aria-label={e.Label} className="group">
                     <e.icon className="size-7 stroke-neutral10 group-hover:stroke-primary" />
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
