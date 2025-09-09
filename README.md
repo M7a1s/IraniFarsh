@@ -40,6 +40,10 @@
       <td style="text-align: left;">React Router</td>
       <td style="text-align: left;">Routing library for React</td>
     </tr>
+      <tr>
+      <td style="text-align: left;">TypeScript</td>
+      <td style="text-align: left;">Programming language</td>
+    </tr>
     <tr>
       <td style="text-align: left;">Tailwind CSS</td>
       <td style="text-align: left;">Utility-first CSS framework</td>

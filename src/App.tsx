@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import { getAppRoutes } from "@/routes";
 import { useCallback, useEffect, useState } from "react";
 import { setDocumentTitle } from "@/utils/utils";
+import ScrollBase from "./base/ScrollBase";
 
 const App = () => {
   const routes = getAppRoutes().map((route) => ({
@@ -36,12 +37,11 @@ const App = () => {
 
   return (
     <>
+      <ScrollBase />
       <SnackbarComp />
       <Header toggleSideBar={toggleSideBar} />
       <SideBar openSideBar={openSideBar} toggleSideBar={toggleSideBar} />
-
       <main className={`w-full flexLayout ${location.pathname.startsWith("/auth") ? "" : "my-23"}`}>{routing}</main>
-
       <Footer />
     </>
   );
